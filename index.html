@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Jenkins Site</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
+  <main class="container" role="main">
 
     <!-- Jenkins Logo -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg" alt="Jenkins Logo" class="logo">
+    <img 
+      src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg" 
+      alt="Jenkins Logo" 
+      class="logo" 
+      width="100" 
+      height="100"
+    />
 
     <h1>🚀 Deployed by Jenkins!</h1>
     <p>Your CI/CD-powered site is live. Let’s connect.</p>
 
-    <!-- Button to About Page -->
-    <a href="about.html" class="button">Go to About Page</a>
+    <!-- About Page Link -->
+    <a href="about.html" class="button" aria-label="Navigate to About Page">Go to About Page</a>
 
     <!-- Contact Form -->
-    <form action="https://formspree.io/f/xyzwgrla" method="POST" class="contact-form">
+    <form 
+      action="https://formspree.io/f/xyzwgrla" 
+      method="POST" 
+      class="contact-form"
+      aria-label="Contact Form"
+    >
       <h2>Contact Me</h2>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <input type="hidden" name="_redirect" value="thankyou.html">
+
+      <label for="name">Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        placeholder="Your Name" 
+        required 
+      />
+
+      <label for="email">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="_replyto" 
+        placeholder="Your Email" 
+        required 
+      />
+
+      <label for="message">Message</label>
+      <textarea 
+        id="message" 
+        name="message" 
+        placeholder="Your Message" 
+        rows="5" 
+        required
+      ></textarea>
+
+      <input type="hidden" name="_redirect" value="thankyou.html" />
       <button type="submit">Send</button>
     </form>
 
-  </div>
+  </main>
 </body>
 </html>
-
